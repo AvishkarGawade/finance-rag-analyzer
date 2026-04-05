@@ -16,3 +16,4 @@ def clean_data(df):
     df["type"] = np.where(df["amount"] > 0, "income", "expense")
 
     df.to_csv("data/processed/cleaned_transactions.csv", index=False)
+    return df
